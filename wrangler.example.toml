@@ -1,0 +1,23 @@
+name = "playupdate"
+type = "javascript"
+zone_id = ""
+account_id = ""
+route = ""
+workers_dev = true
+compatibility_date = "2022-01-25"
+kv_namespaces = [ 
+  PUT STATE KV HERE
+]
+
+# [secrets]
+# PLAYDATE_SERIAL
+# WEBHOOK_URL
+# MEMFAULT_PROJECT_KEY
+
+[triggers]
+crons = ["*/15 * * * *"]
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "service-worker"
