@@ -68,16 +68,16 @@ export interface IMemfaultArtifact {
 
 export interface IMemfaultReleasesResponse extends IMemfaultResponse {
   artifacts: IMemfaultArtifact[];
-	created_date: string;
-	display_name: string;
-	extra_info: any;
-	id: number;
-	min_version: string;
-	must_pass_through: boolean;
-	notes: string;
-	reason: string;
-	revision: string;
-	version: string;
+  created_date: string;
+  display_name: string;
+  extra_info: any;
+  id: number;
+  min_version: string;
+  must_pass_through: boolean;
+  notes: string;
+  reason: string;
+  revision: string;
+  version: string;
 };
 
 export const getLatestRelease = get<IMemfaultReleasesResponse>('releases/latest');
